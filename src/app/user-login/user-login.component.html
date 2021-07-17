@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h4>Template-Driven Form- User Login</h4>
+  <form #loginForm="ngForm" (ngSubmit)="verify()">
+    <div class="form-group">
+      <label for="uName">User Name:</label>
+      <input type="text" id="uName" class="form-control" required name="userName" />
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" class="form-control" required name="password" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-info" type="submit">Login</button>
+    </div>
+  </form>
+  <div *ngIf="errorMessage != null">
+    <span class="text-danger" font-weight-bold>{{errorMessage}}</span>
+  </div>
+  <div *ngIf="successMessage != null "> 
+     <span class="text-success" font-weight-bold>{{successMessage}}</span>
+  </div>
+</div>

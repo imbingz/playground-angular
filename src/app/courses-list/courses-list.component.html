@@ -1,0 +1,18 @@
+
+<table border="1" *ngIf="cName">
+  <thead>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of courses">
+      <!-- <td *ngIf="c.courseName == cName">{{c.courseId}}</td>
+      <td *ngIf="c.courseName == cName">{{c.courseName}}</td> -->
+      <td>{{c.courseId}}</td>
+      <td>{{c.courseName}}</td>
+      <td><button (click)="register(c.courseName)">Register</button></td>
+    </tr>
+  </tbody>
+</table>

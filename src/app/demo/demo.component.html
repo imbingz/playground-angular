@@ -1,0 +1,49 @@
+<div class="container">
+
+<p>demo works!</p>
+<!-- property binding -->
+<button class="btn btn-outline-primary" [disabled] = "buttonStatus">Click Me</button>
+<button class='btn btn-primary'>click me</button>
+<br>
+<!-- <img src="assets/7.png" alt=""> -->
+<!-- <img src="{{imageSrc2}}" alt=""> -->
+<img [src]="imageSrc2" alt="" width="300px">
+<!-- <img bind-src = "imageSrc2" alt=""> -->
+
+<!-- Attribute binding -->
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <th [attr.rowspan]= "noOfCols" class="align-middle">Name</th>
+      <th [attr.colspan] = "noOfRows" >Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Doe</td>
+      <td>78</td>
+      <td class="font-weight-bold">NA</td>
+    </tr>
+    <tr>
+      <td>Jane Doe</td>
+      <td>48</td>
+      <td>86</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+<p [ngStyle]="{color:color}"  >Demo for attribute directive ngStyle</p>
+<p [style.color]="color">Hello Everyone !!!</p>
+<button #btn1 class="btn btn-danger" (click)="changeColor('red')" >Red</button>
+<button (click)="changeColor('green')" class="btn btn-success">Green</button>
+<button (click)="changeColor('blue')" class="btn btn-primary">Blue</button>
+{{btn1.textContent}}
+<br>
+<br>
+
+
+<br>
+<br>
+</div>

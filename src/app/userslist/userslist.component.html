@@ -1,0 +1,11 @@
+<div>Users List inside the user module</div>
+<!-- {{ testUser }}  -->
+
+<div *ngFor= "let userName of testUser">
+  {{ userName }}
+</div>
+
+<div *ngFor= "let user of users">
+  {{ user.name }} is {{ user.age }} years old.
+  <button (click)="removeUser(user.id)">Remove User</button>
+</div>`

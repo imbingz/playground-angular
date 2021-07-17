@@ -1,0 +1,13 @@
+
+<div class="container my-5">
+  <p>Service Demo</p>
+  <div *ngIf="bookListFromService">
+    <table>
+      <tr *ngFor="let book of bookListFromService">
+        <th>{{book.id}}: </th>
+        <td>{{book.name}}</td>
+        <td><button (click)="onClick(book.id)" >Edit</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
